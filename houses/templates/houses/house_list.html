@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}House List{% endblock %}
+
+{% block content %}
+<h1>House List</h1>
+<ul class="list-group">
+    {% for house in houses %}
+    <li class="list-group-item">
+        <a href="{% url 'house_detail' house.id %}">{{ house.address }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

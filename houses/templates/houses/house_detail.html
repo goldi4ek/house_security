@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}House Detail{% endblock %}
+
+{% block content %}
+<h1>{{ house.address }}</h1>
+<h2>Entrances:</h2>
+<ul class="list-group">
+    {% for entrance in entrances %}
+    <li class="list-group-item">
+        <a href="{% url 'entrance_detail' entrance.id %}">Entrance {{ entrance.number }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Entrance Detail{% endblock %}
+
+{% block content %}
+<h1>{{ entrance.house.address }} - Entrance {{ entrance.number }}</h1>
+<h2>Apartments:</h2>
+<ul class="list-group">
+    {% for apartment in apartments %}
+    <li class="list-group-item">Apartment {{ apartment.number }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
